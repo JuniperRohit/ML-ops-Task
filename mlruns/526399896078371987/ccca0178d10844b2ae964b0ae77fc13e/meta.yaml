@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/ML-ops-Task/mlruns/526399896078371987/ccca0178d10844b2ae964b0ae77fc13e/artifacts
+end_time: 1774617898635
+entry_point_name: ''
+experiment_id: '526399896078371987'
+lifecycle_stage: active
+run_id: ccca0178d10844b2ae964b0ae77fc13e
+run_name: train_generated_data
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1774617891526
+status: 3
+tags: []
+user_id: codespace

@@ -1,0 +1,7 @@
+artifact_location: file:///workspaces/ML-ops-Task/mlruns/287087752263583524
+creation_time: 1774617805199
+experiment_id: '287087752263583524'
+last_update_time: 1774617805199
+lifecycle_stage: active
+name: test_exp
+workspace: default
