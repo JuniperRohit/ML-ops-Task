@@ -311,19 +311,34 @@ prometheus_config = create_prometheus_config()
 └───────────┘         └──────────┘
 ```
 
-## 6. Deployment Stack
+## 6. Optional: Kubernetes Deployment
+
+**Kubeflow** and **KServe** support is optional and designed for Kubernetes deployments.
+
+### Installation (Optional - For K8s)
+
+```bash
+# Install optional Kubernetes support
+pip install -e ".[k8s]"
+
+# Or manually:
+pip install kubeflow-sdk>=1.8.0 kserve>=0.10.0
+```
 
 ### Local Development
 
 ```bash
-# 1. Install dependencies
-pip install kubeflow kserve prometheus-client pyyaml
+# 1. Install base dependencies
+pip install -e .
 
-# 2. Run metrics endpoint
+# 2. (Optional) Install Kubernetes support
+pip install -e ".[k8s]"
+
+# 3. Run metrics endpoint
 python -m uvicorn backend.app:app --port 8000
 
-# 3. Prometheus scrapes http://localhost:8000/metrics
-# 4. View dashboards in Grafana
+# 4. Prometheus scrapes http://localhost:8000/metrics
+# 5. View dashboards in Grafana
 ```
 
 ### Kubernetes Deployment

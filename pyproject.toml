@@ -1,6 +1,6 @@
 [project]
 name = "agentic-mlops-assistant"
-version = "0.2.0"
+version = "0.3.0"
 description = "Agentic AI MLOps assistant: planning, executing, and monitoring ML workflows"
 readme = "README.md"
 authors = [{ name = "Your Name", email = "you@example.com" }]
@@ -25,9 +25,15 @@ dependencies = [
   "python-jose[cryptography]>=3.3.0",
   "pyjwt>=2.8.0",
   "pyyaml>=6.0",
-  "kubeflow>=2.0.0",
-  "kserve>=0.11.0",
   "prometheus-client>=0.19.0"
+]
+
+[project.optional-dependencies]
+# Optional dependencies for Kubernetes deployment
+k8s = [
+  "kubeflow-sdk>=1.8.0",
+  "kserve>=0.10.0",
+  "pyyaml>=6.0"
 ]
 
 [project.scripts]
