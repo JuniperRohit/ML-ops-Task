@@ -7,3 +7,8 @@ __pycache__/
 .env
 .env.*
 .DS_Store
+mlruns/
+build/
+*.egg-info/
+dist/
+.pytest_cache/
