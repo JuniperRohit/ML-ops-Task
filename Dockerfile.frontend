@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY . /app
+RUN pip install --upgrade pip && pip install -e .
+EXPOSE 8601
+CMD ["streamlit", "run", "frontend/app.py", "--server.port", "8601", "--server.address", "0.0.0.0"]

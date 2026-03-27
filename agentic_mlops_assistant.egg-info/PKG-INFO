@@ -1,3 +1,23 @@
+Metadata-Version: 2.4
+Name: agentic-mlops-assistant
+Version: 0.1.0
+Summary: Agentic AI MLOps assistant: planning, executing, and monitoring ML workflows
+Author-email: Your Name <you@example.com>
+License-Expression: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn[standard]>=0.23.0
+Requires-Dist: streamlit>=1.30.0
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: pinecone-client>=2.2.0
+Requires-Dist: transformers>=4.40.0
+Requires-Dist: sentence-transformers>=2.2.0
+Requires-Dist: huggingface-hub>=0.16.0
+Requires-Dist: pydantic>=2.6.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: pytest>=7.0.0
+
 # Agentic AI MLOps Assistant
 
 This project is a custom implementation of an Agentic AI assistant for MLOps workflows, built to be structurally distinct from many public starter repos such as `kiranbakale1talentica/mlops-agentic-ai-assignment`.

@@ -1,0 +1,31 @@
+[project]
+name = "agentic-mlops-assistant"
+version = "0.1.0"
+description = "Agentic AI MLOps assistant: planning, executing, and monitoring ML workflows"
+readme = "README.md"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = "MIT"
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.23.0",
+  "streamlit>=1.30.0",
+  "langchain>=0.1.0",
+  "pinecone-client>=2.2.0",
+  "transformers>=4.40.0",
+  "sentence-transformers>=2.2.0",
+  "huggingface-hub>=0.16.0",
+  "pydantic>=2.6.0",
+  "python-dotenv>=1.0.0",
+  "httpx>=0.25.0",
+  "pytest>=7.0.0"
+]
+
+[project.scripts]
+agentic-mlops = "agentic_mlops.cli:main"
+
+[tool.setuptools]
+packages = ["agentic_mlops", "backend", "frontend"]
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

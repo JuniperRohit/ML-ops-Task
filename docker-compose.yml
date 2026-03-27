@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8030:8030"
+    environment:
+      - ROHIT_USE_LOCAL_VECTORSTORE=1
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8601:8601"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - ROHIT_BACKEND_URL=http://backend:8030
+    depends_on:
+      - backend
